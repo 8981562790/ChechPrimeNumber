@@ -26,6 +26,7 @@ class ViewController: UIViewController {
                 if(c == 0){
                 
                 ResulField.text = "\(num) is a prime number"
+                ResulField.text = " \(100) is not a prime number"
                 }
                 else{
                 ResulField.text = "\(num) is not a prime Number"
