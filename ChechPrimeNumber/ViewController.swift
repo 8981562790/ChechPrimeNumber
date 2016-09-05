@@ -9,6 +9,36 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    @IBOutlet weak var userInputField: UITextField!
+    
+    @IBOutlet weak var ResulField: UILabel!
+        @IBAction func checkPrimeNumber(sender: AnyObject) {
+            if let num = (Int(userInputField.text!)){
+        if num != 2 && num != 1 {
+            var c = 0
+            for var i = 2; i < num; i += 1 {
+                if num % i == 0 {
+                 c += 1
+                }
+            }
+                if(c == 0){
+                
+                ResulField.text = "\(num) is a prime number"
+                }
+                else{
+                ResulField.text = "\(num) is not a prime Number"
+                }
+        
+        }
+            }else{
+        
+        ResulField.text = "Please Enter The Whole Number";
+        }
+        
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
